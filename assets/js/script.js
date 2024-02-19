@@ -34,23 +34,32 @@ function calcola() {
     const km = document.getElementById('k_m').value;
     const età = document.getElementById("age").value;
     let base = km * 0.21
+    // var txt = document.createElement('P')
+    // txt.appendChild(price)
+    // document.getElementById('ticket').innerHTML = (price)
 
 
 
     if (età < 18) {
         let min_rounded = (base - ((base) * 20) / 100).toFixed(2);
         console.log(min_rounded)
-        document.writeln('Il tuo biglietto ha un prezzo di ' + (min_rounded) + ' €')
+        var textNode = document.createTextNode('Il tuo biglietto ha un prezzo di ' + (min_rounded) + ' €')
+
     }
     else if (età > 65) {
         let max_rounded = (base - ((base) * 40) / 100).toFixed(2);
         console.log(max_rounded)
-        document.writeln('Il tuo biglietto ha un prezzo di ' + (max_rounded) + ' €')
+        var textNode = document.createTextNode('Il tuo biglietto ha un prezzo di ' + (max_rounded) + ' €')
     }
     else  /* if ((età >= 18) && (età < 65))*/ {
         console.log(base)
-        document.writeln('Il tuo biglietto ha un prezzo di ' + ((base).toFixed(2)) + ' €')
+        var textNode = document.createTextNode('Il tuo biglietto ha un prezzo di ' + ((base).toFixed(2)) + ' €')
+
     }
+    let ticket = getElementById('ticket')
+    let span = document.createElement('span')
+    ticket.appendChild(span)
+    span.appendChild(textNode)
 
 }
 
