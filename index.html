@@ -5,10 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <title>Biglietto Trenitalia</title>
 </head>
 
 <body>
+    <div class="container">
+        <div class="card">
+            <h2>Calcola il tuo biglietto</h2>
+            <div class="col">
+                <input type="number" id="k_m" placeholder="Scrivi qui i kilometri"> <br>
+                <input type="number" id="age" placeholder="Scrivi qui la tua età"> <br>
+                <input type="button" onclick="calcola()" value="Calcola il prezzo del tuo biglietto">
+            </div>
+        </div>
+    </div>
     <script src="./assets/js/style.js"></script>
 </body>
 

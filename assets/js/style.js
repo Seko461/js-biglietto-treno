@@ -28,24 +28,28 @@ if ((età >= 18) && (età < 65)){
     
 */
 
-const km = prompt('Inserisci la distanza in Kilometri')
-const età = prompt('inserisci età')
-let base = km * 0.21
 
-let min_rounded = Math.round(base - ((base) * 20) / 100)
-let max_rounded = Math.round(base - ((base) * 40) / 100)
 
-if (età < 18) {
-    console.log(min_rounded)
-    document.writeln('Il tuo biglietto ha un prezzo di ' + (min_rounded) + ' €')
-}
-else if (età > 65) {
-    console.log(max_rounded)
-    document.writeln('Il tuo biglietto ha un prezzo di ' + (max_rounded) + ' €')
-}
-if ((età >= 18) && (età < 65)) {
-    console.log(base)
-    document.writeln('Il tuo biglietto ha un prezzo di ' + (base) + ' €')
-}
+function calcola() {
+    const km = document.getElementById('k_m').value;
+    const età = document.getElementById("age").value;
+    let base = km * 0.21
 
+    let min_rounded = Math.round(base - ((base) * 20) / 100)
+    let max_rounded = Math.round(base - ((base) * 40) / 100)
+
+    if (età < 18) {
+        console.log(min_rounded)
+        document.writeln('Il tuo biglietto ha un prezzo di ' + (min_rounded) + ' €')
+    }
+    else if (età > 65) {
+        console.log(max_rounded)
+        document.writeln('Il tuo biglietto ha un prezzo di ' + (max_rounded) + ' €')
+    }
+    if ((età >= 18) && (età < 65)) {
+        console.log(base)
+        document.writeln('Il tuo biglietto ha un prezzo di ' + (base) + ' €')
+    }
+
+}
 
