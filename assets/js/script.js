@@ -34,6 +34,36 @@ function calcola() {
     const km = document.getElementById('k_m').value;
     const età = document.getElementById("age").value;
     let base = km * 0.21
+    //     let colBottom = document.getElementsByClassName()
+
+    //     if (età < 18) {
+    //         let min_rounded = (base - ((base) * 20) / 100).toFixed(2);
+    //         console.log(min_rounded)
+    //         let span = document.createElement('span')
+    //         let price = document.createTextNode('Il tuo biglietto ha un prezzo di ' + (min_rounded) + ' €')
+    //         span.appendChild(price)
+    //         colBottom.appenChild(span)
+    //     }
+    //     else if (età > 65) {
+    //         let max_rounded = (base - ((base) * 40) / 100).toFixed(2);
+    //         console.log(max_rounded)
+    //         let span = document.createElement('span')
+    //         let price = document.createTextNode('Il tuo biglietto ha un prezzo di ' + (min_rounded) + ' €')
+    //         span.appendChild(price)
+    //         colBottom.appenChild(span)
+    //     }
+    //     else  /* if ((età >= 18) && (età < 65))*/ {
+    //         console.log(base)
+    //         let span = document.createElement('span')
+    //         let price = document.createTextNode('Il tuo biglietto ha un prezzo di ' + (base) + ' €')
+    //         span.appendChild(price)
+    //         colBottom.appenChild(span)
+    //     }
+    // }
+
+    // function stampa() {
+
+    // }
 
 
 
@@ -50,7 +80,7 @@ function calcola() {
     }
     else  /* if ((età >= 18) && (età < 65))*/ {
         console.log(base)
-        document.writeln('Il tuo biglietto ha un prezzo di ' + (base) + ' €')
+        document.writeln('Il tuo biglietto ha un prezzo di ' + ((base).toFixed(2)) + ' €')
     }
 
 }
